@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Goh"
+    given-names: "Kheng Xi Jevan"
+    orcid: "https://orcid.org/0009-0000-2958-6605"
+title: "f1osc85baygh69dcdwdsyr8vh"
+version: 0.0.0
+doi: _
+date-released: 2026-10-27
+url: "https://github.com/jevangoh/f1osc85baygh69dcdwdsyr8vh"
+license: GPL-3.0-or-later

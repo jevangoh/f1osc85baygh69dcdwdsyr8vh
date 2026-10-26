@@ -1,0 +1,13 @@
+_commit: v0.0.1-69-g25a6272
+_src_path: https://github.com/jevangoh/q6taaj04do99vgf9cog0gurq6.git
+minimum_python_version: "3.14"
+orcid: 0009-0000-2958-6605
+orcid_family_name: Goh
+orcid_given_name: Kheng Xi Jevan
+owner_email: javerngoh@gmail.com
+owner_name: Jevan Goh
+project_description:
+  Python sqlmodel fastcrud crudrouter hooks that publish to redis
+  pubsub
+project_id: f1osc85baygh69dcdwdsyr8vh
+python_type: function
