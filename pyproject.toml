@@ -6,7 +6,7 @@ name = "f1osc85baygh69dcdwdsyr8vh"
 dynamic = ["version"]
 
 requires-python = ">= 3.14"
-dependencies = []
+dependencies = ["msjzm0ilrcvjjguhp29y62uzk>=0.0.1,<0.0.2", "skkrfl6asevwuubvfioii3hlm>=0.0.2,<0.0.3", "sqlalchemy>=2.0.55,<3"]
 
 authors = [{name = "Jevan Goh", email = "javerngoh@gmail.com"}]
 
@@ -34,7 +34,7 @@ docs = [
 ######################################################################################################
 [tool.pixi.workspace]
 channels = ["conda-forge"]
-platforms = ["win-64", "linux-64", "linux-aarch64"]
+platforms = ["win-64", "linux-64"]
 
 [tool.pixi.target.linux-aarch64.activation]
 env = { LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:$CONDA_PREFIX/lib" }
