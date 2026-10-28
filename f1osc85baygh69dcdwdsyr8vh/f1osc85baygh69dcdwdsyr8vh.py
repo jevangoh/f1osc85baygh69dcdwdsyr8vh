@@ -12,20 +12,20 @@ import skkrfl6asevwuubvfioii3hlm as Model
 
 @listens_for(Session, "after_flush")
 def f1osc85baygh69dcdwdsyr8vh(session: Session, flush_context: UnitOfWorkTransaction) -> None:
-    for __object__ in session.new:
-        _object_: Model._ = cast(Model._, __object__)
-        print(str(_object_.id))
-        the_redis_client._.publish("insertion", str(_object_.id))
-        the_redis_client._.publish(f"{_object_.id}_inserted", "")
+    for _new_object_ in session.new:
+        _new_object_: Model._ = cast(Model._, _new_object_)
+        print(str(_new_object_.id))
+        the_redis_client._.publish("insertion", str(_new_object_.id))
+        the_redis_client._.publish(f"{_new_object_.id}_inserted", "")
 
-    for _object_ in session.deleted:
-        _object_: Model._ = cast(Model._, __object__)
-        the_redis_client._.publish("deletion", str(_object_.id))
-        the_redis_client._.publish(f"{_object_.id}_deleted", "")
+    for _deleted_object_ in session.deleted:
+        _deleted_object_: Model._ = cast(Model._, _deleted_object_)
+        the_redis_client._.publish("deletion", str(_deleted_object_.id))
+        the_redis_client._.publish(f"{_deleted_object_.id}_deleted", "")
 
 
 @listens_for(Session, "do_orm_execute")
-def receive_do_orm_execute(orm_execute_state: OrmExecuteState):
+def receive_do_orm_execute(orm_execute_state: OrmExecuteState) -> None:
     if orm_execute_state.is_update:
         _id_: Uuid = cast(Update, orm_execute_state.statement).compile().params["id_1"]
         the_redis_client._.publish("update", str(_id_))
