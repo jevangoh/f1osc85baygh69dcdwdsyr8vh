@@ -6,7 +6,7 @@ name = "f1osc85baygh69dcdwdsyr8vh"
 dynamic = ["version"]
 
 requires-python = ">= 3.14"
-dependencies = ["msjzm0ilrcvjjguhp29y62uzk>=0.0.1,<0.0.2", "skkrfl6asevwuubvfioii3hlm>=0.0.2,<0.0.3", "sqlalchemy>=2.0.55,<3"]
+dependencies = ["msjzm0ilrcvjjguhp29y62uzk>=0.0.1,<0.0.2", "skkrfl6asevwuubvfioii3hlm>=0.0.3,<0.0.4", "sqlalchemy>=2.1.6,<3"]
 
 authors = [{name = "Jevan Goh", email = "javerngoh@gmail.com"}]
 
