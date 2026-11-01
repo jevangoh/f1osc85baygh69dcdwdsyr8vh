@@ -1,4 +1,4 @@
-from typing import cast
+from typing import cast, Optional
 from uuid import UUID as Uuid
 from json import dumps
 
@@ -26,13 +26,15 @@ def callback_after_creation_and_deletion(
         _deleted_object_ = cast(Model._, _deleted_object_)
         the_redis_client._.publish("deletion", str(_deleted_object_.id))
 
-    the_redis_client._.publish("request_completed", session.info.get("request_id"))
+    _request_id_: Optional[str] = session.info.get("request_id")
+    if _request_id_ is not None:
+        the_redis_client._.publish("request_completed", _request_id_)
 
 
 @listens_for(Session, "do_orm_execute")
 def receive_do_orm_execute(orm_execute_state: OrmExecuteState) -> None:
     session = orm_execute_state.session
-    _request_id_: str = session.info.get("request_id")
+    _request_id_: Optional[str] = session.info.get("request_id")
     if orm_execute_state.is_update:
         _id_: Uuid = cast(Update, orm_execute_state.statement).compile().params["id_1"]
         the_redis_client._.publish("update", str(_id_))
