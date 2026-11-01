@@ -2,7 +2,7 @@
 
 [[repository]](https://github.com/jevangoh/f1osc85baygh69dcdwdsyr8vh) [[documentation]](https://f1osc85baygh69dcdwdsyr8vh.readthedocs.io/en/latest/)
 
-Python sqlmodel fastcrud crudrouter hooks that publish to redis pubsub
+Python fastapi server with sqlmodel fastcrud crudrouter hooks that publish to redis pubsub
 
 <!-- do not remove or edit this section -->
 
